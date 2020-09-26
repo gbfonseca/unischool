@@ -1,0 +1,31 @@
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column ">
+  <div class="chart-box mt-5">
+    <h4 class="text-center">Média das Notas</h4>
+    <div class="chart-wrapper">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+  <div class="chart-box mt-5">
+    <h4 class="text-center">Desvio Padrão</h4>
+    <div class="chart-wrapper">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+
+</div>

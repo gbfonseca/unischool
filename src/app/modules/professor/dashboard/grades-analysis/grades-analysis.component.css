@@ -1,0 +1,14 @@
+.chart-box {
+  width: 720px;
+}
+
+@media(max-width:748.9px) {
+  .chart-box {
+    width: 580px;
+  }
+}
+@media(max-width:548.9px) {
+  .chart-box {
+    max-width: 100%;
+  }
+}

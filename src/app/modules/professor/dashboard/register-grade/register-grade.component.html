@@ -1,0 +1,43 @@
+<div class="container h-75">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="row bg-white shadow p-5">
+      <form [formGroup]="gradeForm">
+        <h4 *ngIf="!isEdit" class="text-center">Cadastrar nota</h4>
+        <h4 *ngIf="isEdit" class="text-center">Editar nota</h4>
+        <div class="row form-group mt-5">
+          <div class="col-lg-6">
+            <label for="name">Código da Disciplina</label>
+            <input type="text" class="form-control" id="name" formControlName="lessonCode">
+            <div *ngIf="gradeForm.get('lessonCode').touched && gradeForm.get('lessonCode').invalid">
+              <span *ngIf="gradeForm.get('lessonCode').errors.required" class="small text-danger">Código da disciplina obrigatório.</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <label for="class">Número da Turma</label>
+            <input type="text" class="form-control" id="class" formControlName="classNumber">
+            <div *ngIf="gradeForm.get('classNumber').touched && gradeForm.get('classNumber').invalid">
+              <span *ngIf="gradeForm.get('classNumber').errors.required" class="small text-danger">Número da turma obrigatório.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-lg-6">
+            <label for="registration" for="name">Matrícula do Aluno</label>
+            <input type="text" class="form-control" id="registration" formControlName="studentRegistration">
+            <div *ngIf="gradeForm.get('studentRegistration').touched && gradeForm.get('studentRegistration').invalid">
+              <span *ngIf="gradeForm.get('studentRegistration').errors.required" class="small text-danger">Matrícula obrigatória.</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <label for="grade">Nota do Aluno</label>
+            <input type="text" class="form-control" id="grade" formControlName="studentGrade">
+            <div *ngIf="gradeForm.get('studentGrade').touched && gradeForm.get('studentGrade').invalid">
+              <span *ngIf="gradeForm.get('studentGrade').errors.required" class="small text-danger">Nota do aluno obrigatória.</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-dark">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>
